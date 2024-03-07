@@ -6,9 +6,9 @@ import CocktailList from './components/CocktailList';
 import CocktailDeatil from './components/CocktailDeatil';
 import axios from 'axios';
 import Header from './components/Header'
-import Searchbar from './components/Searchbar';
-import { BASE_URL } from './globals';
-
+import {Route , Routes } from 'react-router-dom'
+import CocktailList from './components/CocktailList'
+import Home from "./components/Home"
 function App() {
   const [searchResults, setSearchResults] = useState([]);
 
