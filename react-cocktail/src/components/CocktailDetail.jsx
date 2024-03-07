@@ -62,5 +62,5 @@ export default function CocktailDetails (props) {
                 </div>
             </div>
         </div>
-    )
+    ) : null
 }
