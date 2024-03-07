@@ -39,7 +39,7 @@ export default function CocktailList() {
                 </div>
             ))}
         </div>
-    );
+    )
 }
 
 

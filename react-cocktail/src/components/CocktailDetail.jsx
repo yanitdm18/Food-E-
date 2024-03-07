@@ -4,7 +4,7 @@ import { BASE_URL } from "../globals"
 import { useNavigate } from "react-router-dom"
 import { Link, useParams } from 'react-router-dom'
 
-export default function CocktailDetails (props) {
+export default function CocktailDetails () {
 
     const [cocktail, setCocktail] = useState('')
     let {strDrink} = useParams()
@@ -12,11 +12,11 @@ export default function CocktailDetails (props) {
     useEffect(() => {
         const getCocktail = async () => {
             const response = await axios.get(`${BASE_URL}${strDrink}`)
-            console.log(response)
+            console.log(response.data)
             setCocktail(response.data)
         }
         getCocktail()
-    }, [])
+    }, [strDrink])
     
     return cocktail ? (
         <div className="cocktail-details" >
@@ -58,6 +58,11 @@ export default function CocktailDetails (props) {
                             <img className="detail-variation-image"/>
                             <button className="detail-variation-button">See More</button>
                         </div>
+                    </div>
+                </div>
+                <div className="detail-back">
+                    <div className="detail-back-link">
+                        <Link to="/cocktaillist">back to list</Link>
                     </div>
                 </div>
             </div>
