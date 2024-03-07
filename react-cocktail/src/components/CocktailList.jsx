@@ -22,10 +22,20 @@ export default function CocktailList() {
 
     return (
         <div className="CocktailList">
-            <h2>I am the Cocktail List</h2>
+            <h2>The Full List</h2>
             {cocktails && cocktails.map(cocktail => (
-                <div key={cocktail.idDrink} className="Cocktail-Name">
-                    <h3>{cocktail.strDrink}</h3>
+                <div key={cocktail.strDrink} className="cocktail-list-result">
+                    <img src={cocktail.strDrinkThumb}/>
+                    <div className="list-result-info">
+                        <div className="list-result-title">{cocktail.strDrink}</div>
+                        <div className="list-result-ingredients">
+                            <div>{cocktail.strIngredient1}, </div>
+                            <div>{cocktail.strIngredient2}, </div>
+                            <div>{cocktail.strIngredient3}, ...</div>
+                        </div>
+                        {/* <div className="list-result-variations">Variations</div> */}
+                        <button className="list-result-button">see more</button>
+                    </div>
                 </div>
             ))}
         </div>
