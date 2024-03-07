@@ -11,11 +11,12 @@ export default function CocktailDetails (props) {
 
     useEffect(() => {
         const getCocktail = async () => {
-            const response = await axios.get(`${BASE_URL}${strDrink}`);
-            setCocktail(response.data);
-        };
-        getCocktail();
-    }, [strDrink]);
+            const response = await axios.get(`${BASE_URL}${strDrink}`)
+            console.log(response)
+            setCocktail(response.data)
+        }
+        getCocktail()
+    }, [])
     
     return cocktail ? (
         <div className="cocktail-details" >
