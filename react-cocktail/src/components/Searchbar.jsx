@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function SearchBar({ onSearch }) {
+function Searchbar({ onSearch }) {
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleSearch = (e) => {
@@ -9,7 +9,8 @@ function SearchBar({ onSearch }) {
       return;
     }
     onSearch(searchQuery);
-  };
+  }
+
 
   return (
     <form onSubmit={handleSearch}>
@@ -24,6 +25,6 @@ function SearchBar({ onSearch }) {
   );
 }
 
-export default SearchBar;
+export default Searchbar;
 
 

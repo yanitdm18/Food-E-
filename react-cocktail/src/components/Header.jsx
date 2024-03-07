@@ -1,11 +1,11 @@
 import Navbar from "./Navbar"
 import Searchbar from "./Searchbar"
- export default function Header () {
+ export default function Header ({handleSearch}) {
     return(
         <div className="header"> 
              <h2> I am the header</h2>
              <Navbar />
-             <Searchbar />
+             <Searchbar onSearch={handleSearch} />
         </div>
     )
  }

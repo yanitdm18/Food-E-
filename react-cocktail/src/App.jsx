@@ -26,7 +26,7 @@ function App() {
   return (
     <div>
       <h1>Sip Savy</h1>
-      <Header/>
+      <Header handleSearch={handleSearch} />
     <Routes>
       <Route exact path="/" component={Home} />
       <Route exact path="/cocktails" render={(props) => <CocktailList {...props} searchResults={searchResults} />} />
