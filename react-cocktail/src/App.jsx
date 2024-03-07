@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import {Route , Routes } from 'react-router-dom'
 import CocktailList from './components/CocktailList'
+import CocktailDetails from './components/CocktailDetails'
 import Home from "./components/Home"
 function App() {
   const [count, setCount] = useState(0)
